@@ -23,9 +23,11 @@ Es ist etwas einfaches, da man ja auch sehen soll ob der Dienst funktioniert ode
 Dann hab ich im Sync folder die index.html datei erstellt. 
 
 #### Docker-compose code  
+    # version: '2'
+    # services:
     web:
       image: nginx # Hier wird das File angegben das installiert wird   
-      ports: # Hier wird die Portweiterleitung konfiguraiert 
+      ports: # Hier wird die Portweiterleitung konfiguriert 
         - 5556:80
       volumes:
         - "./share:/usr/share/nginx/ht  #./Share ist der Ordner wo das index.html file reinkommt.
